@@ -5,8 +5,11 @@ streamlit
 mediapipe
 opencv-python-headless
 fpdf
-pytorch-grad-cam
+grad-cam
 timm
 psutil
 numpy
 pillow
+scikit-learn
+seaborn
+matplotlib
