@@ -10,6 +10,7 @@ from PIL import Image
 from torchvision import transforms
 from collections import deque
 import mediapipe as mp
+from mediapipe.solutions import face_detection as mp_face_detection
 from fpdf import FPDF
 import base64
 from pytorch_grad_cam import GradCAM
@@ -189,7 +190,7 @@ if app_mode == "🎥 Video Scanner":
  
             cap = cv2.VideoCapture(tfile.name)
             total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-            mp_face = mp.solutions.face_detection.FaceDetection(model_selection=1, min_detection_confidence=0.5)
+            mp_face = mp_face_detection.FaceDetection(model_selection=1, min_detection_confidence=0.5)
             prediction_buffer = deque(maxlen=15)
             all_scores = []
  
