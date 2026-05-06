@@ -10,7 +10,7 @@ from PIL import Image
 from torchvision import transforms
 from collections import deque
 import mediapipe as mp
-from mediapipe.solutions.face_detection import FaceDetection
+from mediapipe.python.solutions.face_detection import FaceDetection
 from fpdf import FPDF
 import base64
 from pytorch_grad_cam import GradCAM
