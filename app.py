@@ -189,7 +189,8 @@ if app_mode == "🎥 Video Scanner":
  
             cap = cv2.VideoCapture(tfile.name)
             total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-            mp_face = FaceDetection(model_selection=1, min_detection_confidence=0.5)
+            mp_face_detection = mp.solutions.face_detection
+            mp_face = mp_face_detection.FaceDetection(model_selection=1, min_detection_confidence=0.5)
             prediction_buffer = deque(maxlen=15)
             all_scores = []
  
