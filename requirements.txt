@@ -2,8 +2,7 @@ torch
 torchvision
 torchaudio
 streamlit
-mediapipe==0.10.11
-protobuf==3.20.3
+mediapipe
 opencv-python-headless
 fpdf
 pytorch-grad-cam
